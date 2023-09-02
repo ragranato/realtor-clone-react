@@ -1,20 +1,19 @@
-import React, { useState } from 'react'
-import {AiFillEyeInvisible, AiFillEye} from 'react-icons/ai'
-import { Link } from 'react-router-dom'
-import OAuth from '../components/OAuth'
+import React, { useState } from "react";
+import { AiFillEyeInvisible, AiFillEye } from "react-icons/ai";
+import { Link } from "react-router-dom";
+import OAuth from "../components/OAuth";
 
 function SignIn() {
-  const [ showPassword, setShowPassword ] = useState(false)
-  const [ formData, setFormData ] = useState({
-    email: '',
-    password: ''
-  })
-  const { email, password} = formData
+  const [showPassword, setShowPassword] = useState(false);
+  const [formData, setFormData] = useState({
+    email: "",
+    password: "",
+  });
+  const { email, password } = formData;
 
-  const onChange = (e)=> {
-    
-    setFormData((prev) => ({...prev, [e.target.id]: e.target.value}))
-  }
+  const onChange = (e) => {
+    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+  };
   return (
     <section>
       <h1 className="text-3xl text-center mt-6 font-bold">Sign In</h1>
@@ -97,4 +96,4 @@ function SignIn() {
   );
 }
 
-export default SignIn
+export default SignIn;
