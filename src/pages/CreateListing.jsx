@@ -17,8 +17,28 @@ function CreateListing() {
 
     const { type, name, bedrooms, bathrooms, parking, furnished, address, description, offer, regularPrice, discountedPrice } = formData
 
-    const onChange = () => {
-
+    const onChange = (e) => {
+        let boolean = null;
+        if(e.target.value === 'true'){
+            boolean = true
+        }
+        if (e.target.value === "false") {
+            boolean = false;
+        }
+        // Files
+        if(e.target.files){
+            setFormData((prev) => ({
+                ...prev,
+                images: e.target.files
+            }))
+        }
+        // Text/Boolean/Number
+        if(!e.target.files){
+            setFormData((prev) => ({
+                ...prev,
+                [e.target.id]: boolean ?? e.target.value
+            }))
+        }
     }
   return (
     <main className="max-w-md px-2 mx-auto ">
