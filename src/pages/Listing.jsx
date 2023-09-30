@@ -138,7 +138,7 @@ function Listing() {
               </p>
             )}
           </div>
-          <button className="mt-6 w-full p-2 bg-blue-700 text-white font-semibold text-xl uppercase rounded-md">
+          <button className="mt-6 w-full p-2 bg-blue-700 text-white font-semibold text-lg uppercase rounded-md">
             {listing.type === "rent" ? "Contact Landlord" : "Contact Seller"}
           </button>
         </div>
